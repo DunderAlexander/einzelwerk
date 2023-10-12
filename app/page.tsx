@@ -21,10 +21,8 @@ export default async function Home() {
     <>
       {blocks.map((block: any, idx: number) => {
         const Chunk = chunks[idx];
-        const {
-          values: { items },
-        } = block;
-        return <Chunk key={idx} items={items} />;
+        const { values } = block;
+        return <Chunk key={idx} values={values} />;
       })}
     </>
   );

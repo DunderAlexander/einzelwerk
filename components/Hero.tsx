@@ -15,7 +15,7 @@ interface DataItem {
   object_id: number;
 }
 
-const Hero = ({ items }: { items: DataItem[] }) => {
+const Hero = ({ values: { items } }: { values: { items: DataItem[] } }) => {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center">
       <video

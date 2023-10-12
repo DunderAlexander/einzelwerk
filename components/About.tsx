@@ -27,7 +27,7 @@ interface DataItem {
   object_id: string | number;
 }
 
-const About = ({ items }: { items: DataItem[] }) => {
+const About = ({ values: { items } }: { values: { items: DataItem[] } }) => {
   return (
     <section>
       {items.map((item, idx) => (
