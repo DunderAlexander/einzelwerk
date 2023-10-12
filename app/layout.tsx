@@ -6,22 +6,37 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const getConfig = async () => {
+  const res = await fetch(
+    "https://testapi.einzelwerk.io/index.php?q=api/en/config"
+  );
+
+  if (!res.ok) throw new Error("No config data available.");
+
+  return res.json();
+};
+
 export const metadata: Metadata = {
-  title: "Einzelwerk",
+  title: "Global Media Production",
   description: "A landing page by Einzelwerk",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const config = await getConfig();
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Header menu={config.menu} />
         <main>{children}</main>
-        <Footer />
+        <Footer
+          footer={config.footer}
+          social={config.social}
+          sitename={config.site_name}
+        />
       </body>
     </html>
   );
