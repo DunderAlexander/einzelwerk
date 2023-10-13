@@ -59,8 +59,8 @@ const Hero = ({ values: { items } }: { values: { items: DataItem[] } }) => {
           <DotButton
             key={idx}
             onClick={() => onDotButtonClick(idx)}
-            className={`bg-white rounded-full w-12 h-2 opacity-60 transition-all ${
-              idx === selectedIndex ? "opacity-100 w-16" : ""
+            className={`bg-white rounded-full h-2 transition-all ${
+              idx === selectedIndex ? "opacity-100 w-20" : "opacity-60 w-12"
             }`}
           />
         ))}
