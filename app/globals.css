@@ -1,27 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/dda65d7f418f4ab23abf484c807c9f17?family=Arboria-Medium);
+@import url(https://db.onlinewebfonts.com/c/1c7f14203d028f1c6f8914508f469cb9?family=Arboria-Book);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
