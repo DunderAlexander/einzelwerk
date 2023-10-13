@@ -29,8 +29,10 @@ export default async function RootLayout({
   const config = await getConfig();
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header menu={config.menu} />
+      <body className={`${inter.className} bg-body-background`}>
+        <header className="fixed left-4 right-4 z-10">
+          <Header menu={config.menu} />
+        </header>
         <main>{children}</main>
         <Footer
           footer={config.footer}
