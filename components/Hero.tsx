@@ -31,7 +31,7 @@ const Hero = ({ values: { items } }: { values: { items: DataItem[] } }) => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
   return (
-    <section ref={emblaRef} className="relative h-screen overflow-hidden">
+    <section ref={emblaRef} className="relative h-screen overflow-hidden mb-20">
       <div className="flex">
         {items.map((slide, idx) => (
           <div

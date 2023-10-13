@@ -29,21 +29,37 @@ interface DataItem {
 
 const About = ({ values: { items } }: { values: { items: DataItem[] } }) => {
   return (
-    <section>
+    <section className="flex flex-col gap-8 mx-4 md:mx-16 mb-20 text-white font-arboria-book">
       {items.map((item, idx) => (
-        <article key={idx}>
-          <div>
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
-            <button>{item.button.caption}</button>
-          </div>
-          <div>
+        <article className="grid md:grid-cols-2 gap-24 items-center" key={idx}>
+          <div className={`${idx % 2 === 0 ? "md:order-last" : ""}`}>
             <video
+              className="rounded-2xl"
               src={`https://testapi.einzelwerk.io/${item.video.url}`}
               loop
               autoPlay
               muted
             ></video>
+          </div>
+          <div className="relative flex flex-col gap-4">
+            <img
+              className={`hidden md:block absolute -top-6 ${
+                idx % 2 === 0 ? "-left-6" : "-right-6 rotate-90"
+              }`}
+              src="/angle.svg"
+            />
+            <h1 className="text-3xl font-arboria-medium">{item.title}</h1>
+            <p>{item.description}</p>
+            <button className="bg-about-button text-transparent bg-clip-text flex items-center gap-2">
+              {item.button.caption}
+              <img src="/about_button_arrow.svg" />
+            </button>
+            <img
+              className={`hidden md:block absolute -bottom-10 ${
+                idx % 2 === 0 ? "-right-6 rotate-180" : "-left-6 -rotate-90"
+              }`}
+              src="/angle.svg"
+            />
           </div>
         </article>
       ))}

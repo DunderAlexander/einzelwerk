@@ -18,6 +18,7 @@ const config: Config = {
       },
       backgroundImage: {
         "body-background": "linear-gradient(180deg, #111827 0%, #1F293E 100%);",
+        "about-button": "linear-gradient(90deg, #6366F1 0%, #AC54F1 100%)",
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic":
         //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
