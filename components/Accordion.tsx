@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AccordionChunkContent from "./AccordionChunkContent";
 
 interface Image {
   url: string;
@@ -19,24 +20,11 @@ interface Values {
 
 const Accordion = ({ values }: { values: Values }) => {
   return (
-    <section>
-      <h1>{values.title}</h1>
-      <div>
-        <div>
-          {values.items.map((accordion, idx) => (
-            <article key={idx}>
-              <h2>{accordion.title}</h2>
-              {accordion.description}
-            </article>
-          ))}
-        </div>
-        <div>
-          <img
-            src={`https://testapi.einzelwerk.io/${values.items[0].image.url}`}
-            alt={"image_placeholder"}
-          />
-        </div>
-      </div>
+    <section className="bg-gray-900 flex flex-col items-center gap-16 font-arboria-book py-16 px-4 md:px-16 text-white">
+      <h1 className="font-arboria-medium text-5xl text-center bg-accordion-text bg-clip-text text-transparent max-w-lg">
+        {values.title}
+      </h1>
+      <AccordionChunkContent accordionData={values.items} />
     </section>
   );
 };

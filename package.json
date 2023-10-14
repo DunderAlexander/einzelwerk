@@ -14,11 +14,14 @@
     "isomorphic-dompurify": "^1.9.0",
     "next": "13.5.4",
     "react": "^18",
+    "react-collapse": "^5.1.1",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
+    "@types/react-collapse": "^5.0.2",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
     "eslint": "^8",
