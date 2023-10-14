@@ -3,3 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+article ul {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+
+article ul li {
+  color: black;
+}
+
+article ul li::before {
+  content: "";
+  width: 1em;
+  background-color: #4f46e5;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 50%;
+  height: 0.5em;
+  width: 0.5em;
+  margin-right: 1em;
+}

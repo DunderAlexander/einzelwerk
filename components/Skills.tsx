@@ -1,3 +1,5 @@
+import SkillsTabs from "./SkillsTabs";
+
 interface Button {
   caption: string;
   type: string;
@@ -41,28 +43,26 @@ interface Values {
 }
 
 const Skills = ({ values }: { values: Values }) => {
-  //TODO: Append CTA card to cards array before mapping
   return (
-    <section>
-      <h1>{values.title}</h1>
-      <div>
-        {values.items.map((tab, idx) => (
-          <button key={idx}>{tab.title}</button>
-        ))}
-      </div>
-      <div>
-        {values.items[0].items.map(
-          (
-            card,
-            idx //TODO: create a tab system to show cards according with chosen card
-          ) => (
-            <article key={idx}>
-              <h2>{card.title}</h2>
-              {card.description}
-            </article>
-          )
-        )}
-      </div>
+    <section className="flex flex-col gap-16 justify-center items-center py-16 px-4 md:px-16 bg-gray-100 text-gray-950 font-arboria-book">
+      <h1 className="flex flex-wrap max-w-4xl justify-center items-center font-arboria-medium text-4xl md:text-5xl text-center">
+        {values.title.split(" ").slice(0, 2).join(" ")}
+        <div className="inline-block flex-shrink-0 w-24 h-24 p-1 rounded-full overflow-hidden mx-4 border-2 border-dotted border-blue-600 ">
+          <video
+            className="w-full h-full rounded-full object-cover"
+            autoPlay
+            loop
+            muted
+          >
+            <source
+              src={`https://testapi.einzelwerk.io/${values.video.url}`}
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        {values.title.split(" ").slice(2).join(" ")}
+      </h1>
+      <SkillsTabs values={values} />
     </section>
   );
 };

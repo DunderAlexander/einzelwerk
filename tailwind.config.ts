@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "gray-100": "#F3F4F6",
+        "gray-950": "#030712",
+      },
       fontFamily: {
         "arboria-medium": ["Arboria-Medium"],
         "arboria-book": ["Arboria-Book"],
