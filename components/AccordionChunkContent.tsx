@@ -22,7 +22,16 @@ const AccordionChunkContent = ({
 }) => {
   const [openItem, setOpenItem] = useState(0);
   return (
-    <div className="grid md: grid-cols-2 gap-20">
+    <div className="grid md:grid-cols-2 gap-20">
+      <div className="relative h-96 md:h-auto md:order-last">
+        <Image
+          className="rounded-3xl"
+          layout="fill"
+          objectFit="cover"
+          src={`https://testapi.einzelwerk.io/${accordionData[openItem].image.url}`}
+          alt={"image_placeholder"}
+        />
+      </div>
       <div className="flex flex-col gap-10">
         {accordionData.map((accordion, index) => (
           <AccordionItem
@@ -32,15 +41,6 @@ const AccordionChunkContent = ({
             setOpen={() => setOpenItem(openItem === index ? openItem : index)}
           />
         ))}
-      </div>
-      <div className="relative">
-        <Image
-          className="rounded-3xl"
-          layout="fill"
-          objectFit="cover"
-          src={`https://testapi.einzelwerk.io/${accordionData[openItem].image.url}`}
-          alt={"image_placeholder"}
-        />
       </div>
     </div>
   );
