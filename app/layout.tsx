@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import HeaderWrapper from "@/components/HeaderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +32,9 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-body-background`}>
         <header className="fixed left-4 right-4 z-10">
-          <Header menu={config.menu} />
+          <HeaderWrapper>
+            <Header menu={config.menu} />
+          </HeaderWrapper>
         </header>
         <main>{children}</main>
         <Footer

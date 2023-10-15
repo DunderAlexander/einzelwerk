@@ -12,7 +12,7 @@ type Menu = MenuItem[];
 
 const Header = ({ menu }: { menu: Menu }) => {
   return (
-    <div className="flex justify-between items-center px-4 py-2 mt-4 w-full rounded-3xl bg-header-background text-white">
+    <>
       <Logo />
       <div className="hidden md:flex items-center gap-4">
         <ul className="flex gap-4">
@@ -26,7 +26,7 @@ const Header = ({ menu }: { menu: Menu }) => {
         <button className="bg-button py-3 px-4 rounded-2xl">Contact us</button>
         <BurgerMenu className="md:hidden" />
       </div>
-    </div>
+    </>
   );
 };
 export default Header;
