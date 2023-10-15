@@ -1,8 +1,8 @@
-import FooterArrow from "/public/footer_arrow.svg";
-import InstagramLogo from "/public/instagram.svg";
-import TwitterLogo from "/public/twitter.svg";
-import LinkedInLogo from "/public/linkedin.svg";
-import YouTubeLogo from "/public/youtube.svg";
+import FooterArrow from "/footer_arrow.svg";
+import InstagramLogo from "/instagram.svg";
+import TwitterLogo from "/twitter.svg";
+import LinkedInLogo from "/linkedin.svg";
+import YouTubeLogo from "/youtube.svg";
 
 interface FooterItem {
   alias: string;

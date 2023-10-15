@@ -1,4 +1,4 @@
-import Logo from "/public/einzelwerk.svg";
+import Logo from "/einzelwerk.svg";
 import BurgerMenu from "./BurgerMenu";
 import ContactUs from "./ContactUs";
 import LanguagePicker from "./LanguagePicker";

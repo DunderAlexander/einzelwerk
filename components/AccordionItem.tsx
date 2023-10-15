@@ -1,6 +1,6 @@
 import { sanitize } from "isomorphic-dompurify";
 import { Collapse } from "react-collapse";
-import Arrow from "/public/arrow.svg";
+import Arrow from "/arrow.svg";
 
 interface Image {
   url: string;
