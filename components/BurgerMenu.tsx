@@ -40,7 +40,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ menu }) => {
   };
 
   return (
-    <>
+    <div className="self-center">
       <Menu onClick={toggleMenu} className="md:hidden" />
       <div
         ref={menuRef}
@@ -48,14 +48,13 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ menu }) => {
           isOpen ? "translate-y-0" : "-translate-y-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        {/* <button onClick={() => setIsOpen(false)}>X</button> */}
         <ul className="flex flex-col items-center gap-5">
           {menu.map((menuItem) => (
             <li key={menuItem.pagetitle}>{menuItem.pagetitle}</li>
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
