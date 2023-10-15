@@ -11,6 +11,7 @@ const nextConfig = {
         test: /\.svg$/i,
         resourceQuery: /url/,
       },
+      { resourceQuery: /svgr/ },
       {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
