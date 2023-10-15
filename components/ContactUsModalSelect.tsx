@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Arrow from "../public/arrow.svg";
+import Arrow from "/public/arrow.svg";
 
 const INIT_OPTION = {
   value: "",
