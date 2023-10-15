@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Menu from "../public/menu.svg?svgr";
+import Menu from "../public/menu.svg";
+// import Menu from "../public/menu.svg?svgr";
 
 interface MenuItem {
   alias: string;
