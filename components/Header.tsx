@@ -1,5 +1,6 @@
 import Logo from "../public/einzelwerk.svg?svgr";
 import BurgerMenu from "./BurgerMenu";
+import LanguagePicker from "./LanguagePicker";
 
 interface MenuItem {
   alias: string;
@@ -21,8 +22,8 @@ const Header = ({ menu }: { menu: Menu }) => {
           ))}
         </ul>
       </div>
-      <div className="flex gap-4 items-center">
-        <div className="hidden">lang_picker_placeholder</div>
+      <div className="flex gap-4 items-stretch">
+        <LanguagePicker />
         <button className="bg-button py-3 px-4 rounded-2xl">Contact us</button>
         <BurgerMenu menu={menu} />
       </div>

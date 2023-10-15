@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      content: {
+        "en-flag": 'url("/Flag_of_the_United_Kingdom.svg")',
+        "de-flag": 'url("/Flag_of_Germany.svg")',
+      },
       colors: {
         "gray-100": "#F3F4F6",
         "gray-950": "#030712",
