@@ -1,5 +1,5 @@
 import Logo from "../public/einzelwerk.svg?svgr";
-import BurgerMenu from "../public/menu.svg?svgr";
+import BurgerMenu from "./BurgerMenu";
 
 interface MenuItem {
   alias: string;
@@ -24,7 +24,7 @@ const Header = ({ menu }: { menu: Menu }) => {
       <div className="flex gap-4 items-center">
         <div className="hidden">lang_picker_placeholder</div>
         <button className="bg-button py-3 px-4 rounded-2xl">Contact us</button>
-        <BurgerMenu className="md:hidden" />
+        <BurgerMenu menu={menu} />
       </div>
     </>
   );

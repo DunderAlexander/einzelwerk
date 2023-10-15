@@ -24,7 +24,7 @@ const HeaderWrapper: React.FC<HeaderWrapperProps> = ({ children }) => {
 
   return (
     <div
-      className={`flex justify-between items-center px-4 py-2 mt-4 w-full rounded-3xl transition-all ${
+      className={`flex justify-between items-center font-arboria-book px-4 py-2 mt-4 w-full rounded-3xl transition-all ${
         isTop ? "bg-transparent" : "bg-header-background"
       } text-white`}
     >
