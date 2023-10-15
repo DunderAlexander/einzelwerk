@@ -76,7 +76,7 @@ const SkillsTabs = ({ values }: { values: Values }) => {
           >
             {tab.items.map((card) => (
               <article
-                className="flex flex-col gap-12 flex-1 p-7 border border-gray-400 rounded-2xl"
+                className="flex flex-col gap-12 justify-between flex-1 p-7 border border-gray-400 rounded-2xl"
                 key={card.object_id}
               >
                 <h2 className="text-3xl font-arboria-medium">{card.title}</h2>
