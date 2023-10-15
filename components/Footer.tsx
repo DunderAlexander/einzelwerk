@@ -1,14 +1,8 @@
-// import FooterArrow from "../public/footer_arrow.svg?svgr";
-// import InstagramLogo from "../public/instagram.svg?svgr";
-// import TwitterLogo from "../public/twitter.svg?svgr";
-// import LinkedInLogo from "../public/linkedin.svg?svgr";
-// import YouTubeLogo from "../public/youtube.svg?svgr";
-
-import FooterArrow from "../public/footer_arrow.svg";
-import InstagramLogo from "../public/instagram.svg";
-import TwitterLogo from "../public/twitter.svg";
-import LinkedInLogo from "../public/linkedin.svg";
-import YouTubeLogo from "../public/youtube.svg";
+import FooterArrow from "/footer_arrow.svg";
+import InstagramLogo from "/instagram.svg";
+import TwitterLogo from "/public/twitter.svg";
+import LinkedInLogo from "/public/linkedin.svg";
+import YouTubeLogo from "/public/youtube.svg";
 
 interface FooterItem {
   alias: string;
