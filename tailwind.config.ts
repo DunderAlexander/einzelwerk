@@ -23,6 +23,8 @@ const config: Config = {
       backgroundImage: {
         "body-background": "linear-gradient(180deg, #111827 0%, #1F293E 100%);",
         "about-button": "linear-gradient(90deg, #6366F1 0%, #AC54F1 100%)",
+        footer:
+          "linear-gradient(110deg, hsl(0deg 0% 100%) 0%, hsl(249deg 87% 83%) 59%, hsl(239deg 84% 67%) 100%)",
         "accordion-text": "linear-gradient(270deg, #FFF 7.55%, #666A77 100%)",
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic":
