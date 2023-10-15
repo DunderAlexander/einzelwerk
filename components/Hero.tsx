@@ -54,7 +54,7 @@ const Hero = ({ values: { items } }: { values: { items: DataItem[] } }) => {
           </div>
         ))}
       </div>
-      <div className="absolute flex gap-2 justify-center items-center z-10 bottom-4 left-0 right-0">
+      <div className="absolute flex gap-2 justify-center items-center z-1 bottom-4 left-0 right-0">
         {scrollSnaps.map((_, idx) => (
           <DotButton
             key={idx}

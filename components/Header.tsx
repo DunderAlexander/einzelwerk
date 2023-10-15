@@ -1,5 +1,6 @@
 import Logo from "../public/einzelwerk.svg?svgr";
 import BurgerMenu from "./BurgerMenu";
+import ContactUs from "./ContactUs";
 import LanguagePicker from "./LanguagePicker";
 
 interface MenuItem {
@@ -15,7 +16,7 @@ const Header = ({ menu }: { menu: Menu }) => {
   return (
     <>
       <Logo />
-      <div className="hidden md:flex items-center gap-4">
+      <div className="hidden lg:flex items-center gap-4">
         <ul className="flex gap-4">
           {menu.map((menuItem) => (
             <li key={menuItem.pagetitle}>{menuItem.pagetitle}</li>
@@ -24,7 +25,7 @@ const Header = ({ menu }: { menu: Menu }) => {
       </div>
       <div className="flex gap-4 items-stretch">
         <LanguagePicker />
-        <button className="bg-button py-3 px-4 rounded-2xl">Contact us</button>
+        <ContactUs />
         <BurgerMenu menu={menu} />
       </div>
     </>
