@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import Arrow from "/arrow.svg";
+import Arrow from "public/arrow.svg";
 
 const options = [
   { value: "en", label: "En", flag: "/Flag_of_the_United_Kingdom.svg" },
